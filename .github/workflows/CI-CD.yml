@@ -51,7 +51,7 @@ jobs:
                  ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
                  ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}
                  IMAGE_TAG: latest
-              run:
+              run: |
                 #build docker image
                 #push to ecr so that it can be deployed
 

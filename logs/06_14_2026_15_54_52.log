@@ -1,0 +1,96 @@
+[ 2026-06-14 15:54:59,485 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-06-14 15:54:59,504 ] 107 dagshub - INFO - Accessing as svyom21
+[ 2026-06-14 15:55:01,555 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/svyom21/Network_Security_System "HTTP/1.1 200 OK"
+[ 2026-06-14 15:55:07,431 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-06-14 15:55:07,431 ] 107 dagshub - INFO - Initialized MLflow to track repo "svyom21/Network_Security_System"
+[ 2026-06-14 15:55:07,431 ] 107 dagshub - INFO - Repository svyom21/Network_Security_System initialized!
+[ 2026-06-14 15:55:29,173 ] 25 root - INFO - Starting data_ingestion...
+[ 2026-06-14 15:55:29,176 ] 73 root - INFO - Initiating the Data_Ingestion processs
+[ 2026-06-14 15:55:29,176 ] 18 root - INFO - Getting request for Database connection....
+[ 2026-06-14 15:55:30,028 ] 24 root - INFO - Successfully build connection...
+[ 2026-06-14 15:55:33,162 ] 75 root - INFO - Data shape (11055, 31)
+[ 2026-06-14 15:55:33,162 ] 78 root - INFO - Exported data from mongodb in as a dataframe
+[ 2026-06-14 15:55:33,362 ] 39 root - INFO - successfully wrote the train and test data into the location Artifacts\06_14_2026_15_54_53\DataIngestion\Ingested_Dir\train.csv and Artifacts\06_14_2026_15_54_53\DataIngestion\Ingested_Dir\test.csv
+[ 2026-06-14 15:55:33,362 ] 94 root - INFO - artifact DataIngestionArtifact(train_file_path='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\train.csv', test_file_path='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\test.csv', feature_storepath='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\FeatureStore')
+[ 2026-06-14 15:55:33,362 ] 30 root - INFO - Data Ingestion completed and artifact DataIngestionArtifact(train_file_path='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\train.csv', test_file_path='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\test.csv', feature_storepath='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\FeatureStore')
+[ 2026-06-14 15:55:33,362 ] 41 root - INFO - Starting the validation process..
+[ 2026-06-14 15:55:33,394 ] 29 root - INFO - len of number of cols 31
+[ 2026-06-14 15:55:33,394 ] 30 root - INFO - len of datafranme cols Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2026-06-14 15:55:33,394 ] 29 root - INFO - len of number of cols 31
+[ 2026-06-14 15:55:33,394 ] 30 root - INFO - len of datafranme cols Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2026-06-14 15:55:33,394 ] 128 root - INFO - validation status is True ,All checks are correct for data
+[ 2026-06-14 15:55:33,601 ] 158 root - INFO - artifact DataValidationArtifact(Validation_status=True, drift_file_report='Artifacts\\06_14_2026_15_54_53\\DataValidation\\DRIFT_REPORT\\Report.yml', valid_train_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\VALID\\Valid_train_file_path', invalid_train_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\INVALID_DATA\\Invalid_train_file_path', valid_test_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\VALID\\Valid_test_file_path', invalid_test_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\INVALID_DATA\\Invalid_test_file_path')
+[ 2026-06-14 15:55:33,601 ] 46 root - INFO - Data Validation completed and artifact DataValidationArtifact(Validation_status=True, drift_file_report='Artifacts\\06_14_2026_15_54_53\\DataValidation\\DRIFT_REPORT\\Report.yml', valid_train_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\VALID\\Valid_train_file_path', invalid_train_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\INVALID_DATA\\Invalid_train_file_path', valid_test_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\VALID\\Valid_test_file_path', invalid_test_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\INVALID_DATA\\Invalid_test_file_path')
+[ 2026-06-14 15:55:33,601 ] 56 root - INFO - Starting the transformation process...
+[ 2026-06-14 15:55:33,601 ] 51 root - INFO - Starting the DataTransformation Process....
+[ 2026-06-14 15:55:33,634 ] 37 root - INFO - Initilaized the knn imputer with params {'n_neighbors': 3, 'weights': 'uniform', 'metric': 'nan_euclidean'}
+[ 2026-06-14 15:55:33,660 ] 61 root - INFO - Transformation completed and artfacts DataTransformationArtifact(Preprocessor_Path='Artifacts\\06_14_2026_15_54_53\\DataTransformation\\Transformed_Object\\Preprocessor_Path.pkl', transformed_trainfilepath='Artifacts\\06_14_2026_15_54_53\\DataTransformation\\Transformed_dir\\train.npy', transformed_testfilepath='Artifacts\\06_14_2026_15_54_53\\DataTransformation\\Transformed_dir\\test.npy')
+[ 2026-06-14 15:55:33,660 ] 71 root - INFO - Starting model trainer process...
+[ 2026-06-14 15:55:33,660 ] 150 root - INFO - Starting the model training process...
+[ 2026-06-14 15:55:36,649 ] 159 root - INFO - Got best_model_name,best_model_object and best_model_score
+[ 2026-06-14 15:55:58,641 ] 167 root - INFO -  Sucessfully Finetunned best model
+[ 2026-06-14 15:55:58,650 ] 171 root - INFO - Train metric artifact , Experiment Tracking with Mlflow..
+[ 2026-06-14 15:56:15,800 ] 76 root - INFO - Model Trained and artifact ModelTrainerArtifact(Model_Trained_path='Artifacts\\06_14_2026_15_54_53\\Model\\Trained_model_dir\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1score=0.9374810625189375, precision_score=0.9467564259485924, recall_score=0.9283856771354271), test_metric_artifact=ClassificationMetricArtifact(f1score=0.9338613861386139, precision_score=0.9394422310756972, recall_score=0.9283464566929134))
+[ 2026-06-14 15:58:40,894 ] 25 root - INFO - Starting data_ingestion...
+[ 2026-06-14 15:58:40,894 ] 73 root - INFO - Initiating the Data_Ingestion processs
+[ 2026-06-14 15:58:40,894 ] 18 root - INFO - Getting request for Database connection....
+[ 2026-06-14 15:58:44,013 ] 24 root - INFO - Successfully build connection...
+[ 2026-06-14 15:59:14,533 ] 75 root - INFO - Data shape (11055, 31)
+[ 2026-06-14 15:59:14,533 ] 78 root - INFO - Exported data from mongodb in as a dataframe
+[ 2026-06-14 15:59:14,669 ] 39 root - INFO - successfully wrote the train and test data into the location Artifacts\06_14_2026_15_54_53\DataIngestion\Ingested_Dir\train.csv and Artifacts\06_14_2026_15_54_53\DataIngestion\Ingested_Dir\test.csv
+[ 2026-06-14 15:59:14,669 ] 94 root - INFO - artifact DataIngestionArtifact(train_file_path='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\train.csv', test_file_path='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\test.csv', feature_storepath='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\FeatureStore')
+[ 2026-06-14 15:59:14,669 ] 30 root - INFO - Data Ingestion completed and artifact DataIngestionArtifact(train_file_path='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\train.csv', test_file_path='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\test.csv', feature_storepath='Artifacts\\06_14_2026_15_54_53\\DataIngestion\\Ingested_Dir\\FeatureStore')
+[ 2026-06-14 15:59:14,669 ] 41 root - INFO - Starting the validation process..
+[ 2026-06-14 15:59:14,699 ] 29 root - INFO - len of number of cols 31
+[ 2026-06-14 15:59:14,699 ] 30 root - INFO - len of datafranme cols Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2026-06-14 15:59:14,699 ] 29 root - INFO - len of number of cols 31
+[ 2026-06-14 15:59:14,699 ] 30 root - INFO - len of datafranme cols Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2026-06-14 15:59:14,699 ] 128 root - INFO - validation status is True ,All checks are correct for data
+[ 2026-06-14 15:59:14,828 ] 158 root - INFO - artifact DataValidationArtifact(Validation_status=True, drift_file_report='Artifacts\\06_14_2026_15_54_53\\DataValidation\\DRIFT_REPORT\\Report.yml', valid_train_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\VALID\\Valid_train_file_path', invalid_train_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\INVALID_DATA\\Invalid_train_file_path', valid_test_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\VALID\\Valid_test_file_path', invalid_test_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\INVALID_DATA\\Invalid_test_file_path')
+[ 2026-06-14 15:59:14,832 ] 46 root - INFO - Data Validation completed and artifact DataValidationArtifact(Validation_status=True, drift_file_report='Artifacts\\06_14_2026_15_54_53\\DataValidation\\DRIFT_REPORT\\Report.yml', valid_train_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\VALID\\Valid_train_file_path', invalid_train_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\INVALID_DATA\\Invalid_train_file_path', valid_test_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\VALID\\Valid_test_file_path', invalid_test_filepath='Artifacts\\06_14_2026_15_54_53\\DataValidation\\INVALID_DATA\\Invalid_test_file_path')
+[ 2026-06-14 15:59:14,832 ] 56 root - INFO - Starting the transformation process...
+[ 2026-06-14 15:59:14,832 ] 51 root - INFO - Starting the DataTransformation Process....
+[ 2026-06-14 15:59:14,850 ] 37 root - INFO - Initilaized the knn imputer with params {'n_neighbors': 3, 'weights': 'uniform', 'metric': 'nan_euclidean'}
+[ 2026-06-14 15:59:14,867 ] 61 root - INFO - Transformation completed and artfacts DataTransformationArtifact(Preprocessor_Path='Artifacts\\06_14_2026_15_54_53\\DataTransformation\\Transformed_Object\\Preprocessor_Path.pkl', transformed_trainfilepath='Artifacts\\06_14_2026_15_54_53\\DataTransformation\\Transformed_dir\\train.npy', transformed_testfilepath='Artifacts\\06_14_2026_15_54_53\\DataTransformation\\Transformed_dir\\test.npy')
+[ 2026-06-14 15:59:14,867 ] 71 root - INFO - Starting model trainer process...
+[ 2026-06-14 15:59:14,867 ] 150 root - INFO - Starting the model training process...
+[ 2026-06-14 15:59:15,953 ] 159 root - INFO - Got best_model_name,best_model_object and best_model_score
+[ 2026-06-14 15:59:37,258 ] 167 root - INFO -  Sucessfully Finetunned best model
+[ 2026-06-14 15:59:37,264 ] 171 root - INFO - Train metric artifact , Experiment Tracking with Mlflow..
+[ 2026-06-14 15:59:57,539 ] 76 root - INFO - Model Trained and artifact ModelTrainerArtifact(Model_Trained_path='Artifacts\\06_14_2026_15_54_53\\Model\\Trained_model_dir\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1score=0.9374810625189375, precision_score=0.9467564259485924, recall_score=0.9283856771354271), test_metric_artifact=ClassificationMetricArtifact(f1score=0.9338613861386139, precision_score=0.9394422310756972, recall_score=0.9283464566929134))

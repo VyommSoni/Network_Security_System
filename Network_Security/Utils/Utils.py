@@ -61,11 +61,11 @@ class Commonutils:
        except Exception as e:
          raise NetworkSecurityException(e,sys)
        
-    def save_numpy_array(array:np.array,filepath:str):
+    def save_numpy_array(self,array:np.array,filepath:str):
         """
         This function will save the array into the filepath location"""
         try:
-            with open(filepath,"w") as file:
+            with open(filepath,"wb") as file:
                 return np.save(file,array)
         except Exception as e:
             raise NetworkSecurityException(e,sys)
@@ -74,7 +74,7 @@ class Commonutils:
     def load_numpy_array(self,filepath:str):
         """This function will load the numpy array from the given file location"""
         try:
-            with open(filepath,"r") as file:
+            with open(filepath,"rb") as file:
                 return np.load(file)
         except Exception as e:
             raise NetworkSecurityException(e,sys)
